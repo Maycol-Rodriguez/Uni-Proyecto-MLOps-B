@@ -3,15 +3,13 @@ from __future__ import annotations
 import csv
 import json
 import math
-import sys
 from collections import Counter, defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(PROJECT_ROOT))
-
 from app.features import tokenize
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = PROJECT_ROOT / "data" / "training_texts.csv"
 MODEL_PATH = PROJECT_ROOT / "models" / "sentiment_model.json"
 ALPHA = 1.0
