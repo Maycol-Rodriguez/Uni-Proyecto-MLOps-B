@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    image: mlops-sentiment-api:local
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=local
